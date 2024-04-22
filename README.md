@@ -20,7 +20,7 @@ This is a Django-based CRUD (Create, Read, Update, Delete) system that allows us
 - tzdata==2023.3
 
 ## Installation
-- Clone this repository: git clone https://github.com/salmanpython06/Djanog-crud-system.git
+- Clone this repository: git clone https://github.com/salmanmallah/Django-CRUD-System.git
 - Install dependencies: pip install -r requirements.txt
 - Run migrations: python manage.py migrate
 - Start the server: python manage.py runserver
