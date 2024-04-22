@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}UPDATE CRUD{% endblock title %}
+{% block body %}
+
+<div class="container mt-3">
+      <!--   heading   -->
+      <h1 class="display-5 text-center text-white">
+        <a style="text-decoration: none;" class="django_heading text-white">
+        Django: CRUD System
+        </a>
+      </h1>
+      <hr class="bg-white border-2 border-top border-white">
+
+    <div class="row mt-3">
+          <div class="col-md-4 mt-3">
+            <h3 class="text-white text-center display-5"> Records</h3>
+            <!--    form here    -->
+            <form action="" method="post" autocomplete="on" class="mt-5">
+              {% csrf_token %}
+              <div class="mb-3">
+                <input type="text" class="form-control"  name="name"  placeholder="name" value="{{ user.name }}" focus="on">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control"  name="email" placeholder="email" value="{{ user.email }}">
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control"  name="username" autocomplete="off" value="{{ user.username }}" placeholder="username">
+              </div>
+              <div class="mb-3">
+              <!--  this is my own logic that if user update the row only than user should able to show password
+
+               -->
+                <input
+                        {% if text %}
+                        type="text"
+                        {% else %}
+                        type="password"
+                        {% endif %}
+                        class="form-control" name="password" value="{{ user.password }}" placeholder="password"
+                >
+              </div>
+
+              <button type="submit" class="btn btn-primary">Submit</button>
+              {% if text %}
+              <a href="/index.html" style="text-decoration: none">
+              <button type="button" class="btn btn-primary">
+                  Cancel
+              </button>
+              </a>
+              <button type="reset" class="btn btn-primary">
+                  Reset
+              </button>
+              {% endif %}
+
+            </form>
+          </div>
+
+          <div class="col-md-8 mt-3">
+            <h3 class="text-white text-center display-5">
+              View Records
+
+            </h3>
+            <table class="table text-white mt-4 ">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">User Name</th>
+                  <th scope="col">Password</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for row in user_data %}
+                <tr>
+                  <th scope="row">{{ row.id }}</th>
+                  <td>{{ row.name }}</td>
+                  <td>{{ row.email }}</td>
+                  <td>{{ row.username }}</td>
+                  <td>{{ row.password }}</td>
+                  <td class="text-center" >
+
+                    <a class="btn btn-danger" href="index.html/delete/{{ row.id }}" style="text-decoration: none; color: white;"><i class="icon-trash"></i></a>
+<a class="btn btn-success" href="/update.html/{{ row.id }}" style="text-decoration: none; color: white;"><i class="icon-wrench"></i></a>
+
+                  </td>
+                </tr>
+              {% endfor %}
+
+              </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

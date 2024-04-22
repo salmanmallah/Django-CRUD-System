@@ -1,0 +1,72 @@
+body {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #1a5b9b !important;
+
+}
+
+.salman_table{
+    background-color: #41464b7a !important;
+    opacity: 1;
+    margin-top: 3em !important;
+}
+
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0;
+}
+
+/* Optional: Adjust the margin between individual buttons */
+.dt-buttons .btn {
+    margin-bottom: -50px; /* Adjust this value as needed */
+}
+
+/* Change the background color and text color of DataTable buttons */
+.dt-buttons .btn {
+    background-color: #007BFF; /* Change to your desired background color */
+    color: #FFFFFF; /* Change to your desired text color */
+    /* Add any other CSS properties as needed */
+}
+
+/* Hover state for buttons (optional) */
+.dt-buttons .btn:hover {
+    background-color: #0056b3; /* Change to your desired hover background color */
+    /* Add any other CSS properties as needed */
+}
+
+div.dataTables_wrapper div.dataTables_length label {
+    font-weight: normal;
+    text-align: left;
+    white-space: unset;
+    margin-top: 31px;
+    font-size: larger;
+    color: white;
+}
+
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 0px;
+    margin-left: -12em;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: left;
+    color: white;
+    font-size: 19px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 0.85em;
+    font-size: 20px;
+    text-align: left;
+    margin-top:-20px;
+    color: white;
+}
+.mt-3 {
+    margin-top: 1rem!important;
+    background: #1a214d6e;
+}
+
+
+
