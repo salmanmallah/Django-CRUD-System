@@ -51,6 +51,7 @@ def update(request, user_id):
         'text': True
     }
 
+
     # updating data
     if request.method == 'POST':
         # getting form data
