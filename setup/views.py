@@ -3,7 +3,6 @@ from django.contrib import messages
 from setup.models import user_login
 from sys import exc_info
 
-
 # Create your views here.
 def index(request):
     # getting data from form
